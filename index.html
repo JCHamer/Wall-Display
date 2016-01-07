@@ -1,0 +1,29 @@
+<!doctype htlm5>
+<html>
+	<head>
+		<title>Wall Display</title>
+		<link href="css/styles.css" type="text/css" rel="stylesheet">
+	    <script type="text/javascript" src="scripts/clock_analog.js"></script>
+
+		<!-- to set focus on calendar to use keyboard shortcuts-->
+		<script>
+			function setFocus() {
+			    var iframe = document.getElementById("calendar");
+			    iframe.contentWindow.focus();
+			}
+		</script>
+	</head>
+	<body onLoad="setFocus()">
+		<div id="mainCol">
+			<div id="topbar" class="content">
+				<span class="pull_left"><canvas id="analog_clock" width="175" height="175"></canvas></span>
+				<span class="pull_right"><canvas id="digital_clock"></canvas></span>
+				<div style='clear:both'></div>
+			</div>
+			<!-- embedded calendar widget-->
+			<iframe id="calendar" src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;mode=WEEK&amp;height=1125&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=jonathan%40hamermesh.com&amp;color=%23711616&amp;src=olvhgfbvr9be6k8lodr6g1ael5nugrg3%40import.calendar.google.com&amp;color=%23125A12&amp;src=umich.edu_bl9fbeiht799e492nqosrq99k4%40group.calendar.google.com&amp;color=%23182C57&amp;ctz=America%2FNew_York" style="border-width:0" width="800" height="1125" frameborder="0" scrolling="no"></iframe>
+			<!-- embedded weather widget-->
+			<iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=42.274800&lon=-83.742389&name=Ann Arbor"></iframe>
+		</div>
+	</body>
+</html>
