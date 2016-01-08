@@ -4,7 +4,7 @@ window.onload = function () {
     function showClock() {
 
         // DEFINE CANVAS AND ITS CONTEXT.
-        var canvas = document.getElementById('analog_clock');
+        var canvas = document.getElementById('clock');
         var ctx = canvas.getContext('2d');
 
         var date = new Date;
@@ -29,8 +29,6 @@ window.onload = function () {
             ctx.arc(canvas.width / 2, canvas.height / 2, secHandLength + 10, 0, Math.PI * 2);
             ctx.strokeStyle = '#DBDBDB';
             ctx.stroke();
-			ctx.fillStyle = '#0DB1ED'
-			ctx.fill();
         }
         function OUTER_DIAL2() {
             ctx.beginPath();
@@ -62,7 +60,7 @@ window.onload = function () {
                 ctx.moveTo(x1, y1);
                 ctx.lineTo(x2, y2);
 
-                ctx.strokeStyle = '#466B76';
+                ctx.strokeStyle = '#1B2D33';
                 ctx.stroke();
             }
         }
@@ -82,7 +80,7 @@ window.onload = function () {
                 ctx.moveTo(x1, y1);
                 ctx.lineTo(x2, y2);
 
-                ctx.strokeStyle = '#C4D1D5';
+                ctx.strokeStyle = '#393939';
                 ctx.stroke();
             }
         }
@@ -106,7 +104,7 @@ window.onload = function () {
             ctx.lineTo((canvas.width / 2 - Math.cos(angle) * 20),
                 canvas.height / 2 - Math.sin(angle) * 20);
 
-            ctx.strokeStyle = '#586A73';        // COLOR OF THE HAND.
+            ctx.strokeStyle = '#000';        // COLOR OF THE HAND.
             ctx.stroke();
         }
 
@@ -122,7 +120,7 @@ window.onload = function () {
             ctx.lineTo((canvas.width / 2 + Math.cos(angle) * secHandLength / 1.1),
                 canvas.height / 2 + Math.sin(angle) * secHandLength / 1.1);
 
-            ctx.strokeStyle = '#999';  // COLOR OF THE HAND.
+            ctx.strokeStyle = '#000';  // COLOR OF THE HAND.
             ctx.stroke();
         }
 
